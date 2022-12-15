@@ -1,9 +1,95 @@
+:root {
+    --myfont1: Georgia, 'Times New Roman', Times, serif;
+    --myfont4: 'proxima-nova', sans-serif;
+    --lightestgreen: rgb(126, 171, 125);
+    --darkestgreen: rgba(3, 59, 3, 0.878);
+    --blackgreen: rgb(1, 45, 18);
+}
+
+body {
+    background-color: var(--darkestgreen);
+  }
+
+header {
+    padding: 20px;
+    text-align: left;
+    background: var(--blackgreen);
+    color: var(--lightestgreen);
+  }
+  
+
+h1 {
+ font-size: 80px;
+ font-family: var(--myfont1);
+}
+
+nav {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+nav a {
+   
+}
+
 .profile-photo {
-    height: 200px;
+    display: flex;
+    height: 300px;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
+    margin-top: 20px;
     background-image: url("../photos/IMG_20200809_000605_617.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
 }
+
+.content {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {border-style: solid;
+border-width: 1px;
+border-radius: 60px;
+padding: 10px;
+background-color: var(--lightestgreen);
+height: 400px;
+box-shadow: 5px 5px 5px var(--blackgreen);
+margin: 20px;
+}
+
+.card > header {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 90px;
+    padding: 10px;
+    height: 70px;
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+h2 {
+    font-size: 00px
+    font-family: --myfont1;
+}
+
+p {
+    font-size: 10px
+    font-family: var(--myfont4);
+}
+
+@media screen and (max-width: 768px) {
+    main,
+    nav {
+      flex-direction: column;
+    }
+  }
