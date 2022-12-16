@@ -4,10 +4,12 @@
     --lightestgreen: rgb(126, 171, 125);
     --darkestgreen: rgba(3, 59, 3, 0.878);
     --blackgreen: rgb(1, 45, 18);
+    --edge-color: rgb(49, 102, 6);
+    --navyblue: rgb(2, 1, 41);
 }
 
 body {
-    background-color: var(--darkestgreen);
+    background-color: var(--lightestgreen);
   }
 
 header {
@@ -32,7 +34,18 @@ nav {
 }
 
 nav a {
-   
+   text-decoration: none;
+    text-align:center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    display:flex;
+    justify-content:space-between;
 }
 
 .profile-photo {
@@ -56,35 +69,52 @@ nav a {
 }
 
 .card {border-style: solid;
-border-width: 1px;
-border-radius: 60px;
-padding: 10px;
-background-color: var(--lightestgreen);
-height: 400px;
-box-shadow: 5px 5px 5px var(--blackgreen);
-margin: 20px;
+    border-width: 1px;
+    padding: 20px;
+    background-color: var(--navyblue);
+    box-shadow: 5px 5px 5px var(--blackgreen);
+    margin: 20px;
+    font-size: 20px;
+    color:var(--lightestgreen);
 }
 
 .card > header {
     border-style: solid;
     border-width: 1px;
-    border-radius: 90px;
     padding: 10px;
     height: 70px;
     width: 300px;
     text-align: center;
-    font-size: 30px;
-    
+    font-size: 30px; 
+    background: var(--darkestgreen);  
 }
 
 h2 {
-    font-size: 00px
-    font-family: --myfont1;
+    font-family: var(--myfont1);
+}
+
+h3 {
+    font-family: var(--myfont4);
+    font-size: 20px;
 }
 
 p {
     font-size: 10px
     font-family: var(--myfont4);
+}
+
+.project-1 {
+    height: 400px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: var(--lightestgreen) ;
+    box-shadow: 5px 5px 5px var(--edge-color);
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
 }
 
 @media screen and (max-width: 768px) {
