@@ -1,41 +1,49 @@
 :root {
     --myfont1: Georgia, 'Times New Roman', Times, serif;
     --myfont4: 'proxima-nova', sans-serif;
-    --lightestgreen: rgb(126, 171, 125);
-    --darkestgreen: rgba(3, 59, 3, 0.878);
-    --blackgreen: rgb(1, 45, 18);
-    --edge-color: rgb(49, 102, 6);
-    --navyblue: rgb(2, 1, 41);
+    --lightestgreen: rgb(234, 176, 208);
+    --darkestgreen: black;
+    --blackgreen: rgb(95, 4, 25);
+    --navyblue: rgb(234, 127, 149);
 }
 
+/*sets page background color*/
 body {
     background-color: var(--lightestgreen);
-  }
+}
 
+/*styling for the header including nav bar and photo below*/
 header {
     padding: 20px;
     text-align: left;
     background: var(--blackgreen);
     color: var(--lightestgreen);
-  }
+}
   
-
 h1 {
- font-size: 80px;
- font-family: var(--myfont1);
+   font-size: 80px;
+   font-family: var(--myfont1);
 }
 
 nav {
     display: flex;
     border-style: solid;
-    border-width: 1px;
-    border-radius: 20px;
+    border-width: 3px;
+    border-color:black;
+    background-color: rgb(234, 176, 208);
     padding: 10px;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: var(--myfont4);
 }
 
 nav a {
    text-decoration: none;
     text-align:center;
+    padding-left: 70px;
+    padding-right: 70px;
+    color: rgb(103, 9, 20);
 }
 
 ul {
@@ -43,10 +51,6 @@ ul {
     justify-content: space-between;
 }
 
-li {
-    display:flex;
-    justify-content:space-between;
-}
 
 .profile-photo {
     display: flex;
@@ -59,34 +63,39 @@ li {
     background-repeat: no-repeat;
     background-position: right;
 }
+/*styling for the header including nav bar and photo above*/
 
+/*styling for the content part of the page below*/
 .content {
     flex: 1;
     padding: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: left;
 }
 
-.card {border-style: solid;
+/*styling for the main sections below*/
+.card {
+    border-style: solid;
     border-width: 1px;
     padding: 20px;
     background-color: var(--navyblue);
     box-shadow: 5px 5px 5px var(--blackgreen);
     margin: 20px;
-    font-size: 20px;
-    color:var(--lightestgreen);
+    font-size: 20px;  
 }
 
 .card > header {
     border-style: solid;
-    border-width: 1px;
+    border-width: 3px;
+    border-color: var(--darkestgreen);
     padding: 10px;
     height: 70px;
     width: 300px;
     text-align: center;
     font-size: 30px; 
-    background: var(--darkestgreen);  
+    color:var(--blackgreen);
+    background: var(--lightestgreen);  
 }
 
 h2 {
@@ -103,23 +112,27 @@ p {
     font-family: var(--myfont4);
 }
 
+/*styling for the projects in "my work" below*/
 .project-1 {
     height: 400px;
+    ;
+}
+
+.projects {
+    height: 200px;
+    
+}
+
+.project-1, .projects {
     border-style: solid;
     border-width: 5px;
     border-radius: 5px;
-    border-color: var(--lightestgreen) ;
-    box-shadow: 5px 5px 5px var(--edge-color);
+    border-color: var(--blackgreen) ;
+    box-shadow: 5px 5px 5px var(--blackgreen);
     margin-top: 15px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    
 }
 
-@media screen and (max-width: 768px) {
-    main,
-    nav {
-      flex-direction: column;
-    }
-  }
+
